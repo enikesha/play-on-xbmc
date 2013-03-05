@@ -28,5 +28,6 @@ function json_rpc(url, method, params, callback) {
     };
     var post = JSON.stringify(json);
     console.log('json_rpc sending to ' + url + ': ' + post);
+    xhr.setRequestHeader("Content-type","application/json");
     xhr.send(post);
 }
